@@ -1,0 +1,509 @@
+// width: 991px - 1170px
+@media screen and (max-width: $md){
+    // Header ------------------------------
+    .header{
+        &__logo{
+            margin-right: 150px;
+        }
+        &__right-block{
+            margin-left: 90px;
+        }
+    }
+    // Catalog-------------------
+    .catalog{
+        .info__sign1{
+            width: 20%;
+            top: 300px;
+        }
+        .info__sign2{
+            width: 20%;
+            bottom: 1200px;
+        }
+    }
+
+    // Popup
+    .popup {
+        &__window {
+            max-width: 800px;
+        }
+        &__close{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .gallery {
+        &__photo {
+            width: 70%;
+            height: 100%;
+        }
+        &__item {
+            max-width: 200px;
+        }
+        &__img {
+            width: 200px;
+        }
+    }
+
+    .offer__title {
+        @include font(30px, 700, 100%);
+    }
+
+    .basic {
+        &__wrap {
+            margin-right: 30px;
+        }
+    }
+
+    .popup__btn {
+        padding: 21px 60px;
+        @include font(16px, 700, 122.7%);
+    }
+
+    .button-wrap {
+        padding: 12px 38px;
+
+        &__img {
+            width: 30px;
+        }
+
+        &__text {
+            @include font(16px, 700, 122.7%);
+        }
+    }
+    // section About
+    .about{
+        &__body{
+            padding-right: 100px;
+        }
+        &__logo{
+            width: 20%;
+            top: -100px;
+        }
+    }
+    // sectiom Clients
+    .clients{
+        .slide__card{
+            width: 70%;
+        }
+    }
+    // section Contacts
+    .contacts {
+        &__logo-left {
+            width: 20%;
+            top: -150px;
+        }
+    
+        &__logo-right {
+            width: 20%;
+            top: 470px;
+        }    
+    }
+    // Footer
+    .footer{
+        &__info,
+        &__tel,
+        &__email,
+        &__adress{
+            font-size: 16px;
+        }
+    }
+
+}
+// width: 767px - 990px
+@media screen and (max-width: $md1) {
+    // Header ------------------------------
+    .header{
+        &__logo{
+            margin-right: 55px;
+        }
+        &__right-block{
+            margin-left: 30px;
+        }
+        &__btn{
+            margin-left: 20px;
+        }
+        .menu__item{
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+    // Top------------------------------
+    .top {
+        &__offer{
+            width: 100%;
+        }
+       
+    }
+    // Catalog------------
+    .catalog{
+        .block{
+            gap: 20px;
+        &__img {
+            width: 55%;
+            // height: 50%;
+        }
+        &__info{
+            height: 588px;
+        }
+        }
+        .info{
+            &__title{
+                @include font(20px, 700, 100.8%);
+            }
+            &__subtitle{
+                @include font(16px, 300, 122.7%);
+            }
+            &__item {
+                @include font(16px, 700, 100%);
+            }
+            &__price {
+                @include font(18px, 700, 122.7%);
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+            }
+            &__sign2 {
+                bottom: 900px;
+            }
+            &__btn{
+                margin-top: 20px;
+            }
+        }
+    }
+    // Popup
+    .popup{
+        &__window {
+            max-width: 600px;
+        }
+        &__close{
+            right: 40px;
+        }
+    }
+    .gallery {
+        flex-direction: column;
+
+        &__photo {
+            margin: 0 auto;
+            margin-bottom: 30px;
+            width: 90%;
+        }
+
+        &__preview {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+        }
+        &__img{
+            width: 170px;
+        }
+    }
+        .offer {
+            &__title {
+                text-align: center;
+                @include font(28px, 700, 122.7%);
+            }
+            &__subtitle{
+                text-align: center;
+            }
+            &__small-title{
+                text-align: center;
+            }
+            &__radio{
+                padding-left: 70px;
+            }
+        }
+        // section About
+        .about {
+            &__body {
+                padding-right: 10px;
+            }
+        }
+        // section Clients 
+        .clients{
+            // .slide__card{
+            //     width: 50%;
+            // }
+            .swiper-pagination-bullet {
+                width: 100px;
+            }
+        }
+        // section Contacts
+        .contacts{
+            &__sub-title{
+                margin-bottom: 50px;
+            }
+            &__block{
+                margin-bottom: 100px;
+            }
+            &__adress{
+                background: url('../img/contacts/adress.svg') no-repeat left center;
+            }
+        }
+        // Footer
+        .footer{
+            &__text{
+                display: none;
+            }
+        }
+}
+
+// width: 561px - 766px
+@media screen and (max-width: $md2) {
+    // Header -----------------------------
+    .header{
+        &__btn{
+            display: none;
+        }
+    }
+    // Catalog------------------
+    .catalog{
+        &__block{
+            align-items: center;
+        }
+        .block{
+            flex-direction: column;
+            &__img{
+                width: 80%;
+            }
+            &__info{
+                padding: 0 20px;
+                height: 100%;
+            }
+        }
+        .info{
+            &__topblock{
+                margin-bottom: 20px;
+            }
+            &__blockbtn{
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+            &__downblock{
+                padding-left: 25px;
+            }
+            &__sign1 {
+                display: none;
+            }
+            &__sign2 {
+                display: none;
+            }
+        }
+
+        .block1{
+            flex-direction: column-reverse;
+        }
+    }
+    .popup{
+        &__buttons{
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+    }
+    .offer{
+        &__hero-text {
+            margin-bottom: 30px;
+            &::before {
+                width: 120px;
+                top: 63px;
+                left: -53px;
+            }
+        }
+    }
+    .basic{
+        justify-content: space-around;
+        &__wrap{
+            margin-right: 0;
+        }
+    }
+    // section Video
+    .video{
+        &__iframe{
+            height: 315px;
+        }
+    }
+    // section About
+    .about {
+        background:  url('../img/about/longimg.png') no-repeat top left/cover;
+        &__logo{
+            display: none;
+        }
+        &__body {
+            padding-right: 10px;
+        }
+    }
+    // section Clients
+    .clients{
+        .swiper-pagination-bullet{
+            width: 70px;
+        }
+    }
+    // section Contacts
+    .contacts{
+        &__logo-left{
+            display: none;
+        }
+        &__logo-right{
+    display: none;        }
+        &__body{
+            flex-direction: column;
+        }
+        &__info{
+            padding-right: 0;
+            padding-bottom: 50px;
+        }
+        &__sub-title{
+            margin-bottom: 100px;
+        }
+        &__adress{
+            background: url('../img/contacts/adress.svg') no-repeat left center/contain;
+        }
+    }
+    // Footer
+    .footer{
+        &__top-row{
+            flex-direction: column;
+        }
+        &__info{
+            margin-bottom: 20px;
+        }
+        &__adress{
+            background: url('../img/footer/adress.svg') no-repeat right center/contain;
+        }
+        
+    }
+}
+// width: 320px - 560px
+@media screen and (max-width: $md3) {
+    // Header ------------------------------
+    .header {
+        &__navigation{
+            justify-content: space-between;
+        }
+        &__logo{
+            margin-right: 0;
+        }
+        &__menu{
+            display: none;
+        }
+        &__right-block{
+            margin-left: 0;
+        }
+        &__burger{
+            display: block;
+            margin-left: 50px;
+        }
+    }
+    // Top ------------------------------
+    .top{
+        &__offer{
+            padding: 152px 0px;
+            width: 290px;
+        }
+        &__list{
+            margin-bottom: 80px;
+        }
+        &__item{
+            @include font(14px, 400, 214%);
+        }
+    }
+    // Catalog
+    .catalog{
+        .block{
+            &__img{
+                width: 100%;
+            }
+        }
+    }
+
+    // Popup
+    .popup{
+        &__window{
+            max-width: 100%;
+        }
+        &__buttons{
+            flex-direction: column;
+        }
+        &__btn{
+            margin-bottom: 30px;
+        }
+        &__back{
+            display: block;
+            text-align: center;
+        }
+    }
+    .gallery {
+        &__photo{
+            width: 100%;
+        }
+        &__preview{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item{
+            &:not(:last-child){
+                margin-right: 0;
+                margin-bottom: 25px;
+            }
+        }
+        &__img{
+            width: 100%;
+        }
+    }
+    .offer{
+        &__title,
+        &__small-title {
+            font-size: 18px;
+        }
+        &__choice{
+            flex-direction: column;
+        }
+        &__hero-text{
+            margin-bottom: 30px;
+        }
+    }
+    .basic{
+        flex-direction: column;
+        text-align: center;
+    }
+    .button-wrap {
+        margin-left: 0;
+    }
+    // section Clients
+    .clients {
+        .slide__card{
+            width: 50%;
+        }
+        .swiper-pagination-bullet {
+            width: 12px;
+        }
+    }
+    // section Contacts
+    .contacts{
+        &__form{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    // Footer
+    .footer{
+        &__adress {
+            background: url('../img/footer/adress.svg') no-repeat right center;
+        }
+        &__down-row{
+            flex-direction: column;
+        }
+        &__down-link{
+            margin-bottom: 30px;
+        }
+    }
+
+
+
+}
