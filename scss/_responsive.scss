@@ -389,16 +389,49 @@
         &__logo{
             margin-right: 0;
         }
-        &__menu{
-            display: none;
+        &__menu {
+            // display: none;
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: auto;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+            padding: 30px 30px 100px 30px;
+            transition: left 0.3s ease;
         }
-        &__right-block{
+        &__menu.active {
+            left: 0;
+        }
+        &__right-block {
             margin-left: 0;
         }
-        &__burger{
+        &__burger {
+            position: relative;
+            z-index: 50;
+            cursor: pointer;
             display: block;
             margin-left: 50px;
         }
+        &__btn {
+            display: block;
+            z-index: 5;
+            min-height: 28px;
+            padding: 9px 22px;
+            @include font(7.9px, 700, 126.6%);
+            position: absolute;
+            right: 15px;
+            bottom: -105px;
+        }
+        .menu__list {
+            flex-direction: column;
+        }
+        .menu__item {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }    
     }
     // Top ------------------------------
     .top{

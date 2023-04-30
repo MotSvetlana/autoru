@@ -121,6 +121,15 @@ h1 {
     &__maxcontainer {
         border-bottom: 0.5px solid #F7F7F7;
     }
+    &__maxcontainer.active {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+        box-shadow: 0 10px 10px -10px rgba(0, 0, 0, .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+    }
     &__navigation {
         flex-wrap: wrap;
         display: flex;
@@ -129,9 +138,6 @@ h1 {
     }
     &__logo {
         margin-right: 200px;
-    }
-    &__menu {
-        display: flex;
     }
     &__right-block{
         display: flex;

@@ -183,6 +183,15 @@ h1 {
 .header__maxcontainer {
   border-bottom: 0.5px solid #F7F7F7;
 }
+.header__maxcontainer.active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
 .header__navigation {
   flex-wrap: wrap;
   display: flex;
@@ -191,9 +200,6 @@ h1 {
 }
 .header__logo {
   margin-right: 200px;
-}
-.header__menu {
-  display: flex;
 }
 .header__right-block {
   display: flex;
@@ -1266,14 +1272,46 @@ h1 {
     margin-right: 0;
   }
   .header__menu {
-    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    padding: 30px 30px 100px 30px;
+    transition: left 0.3s ease;
+  }
+  .header__menu.active {
+    left: 0;
   }
   .header__right-block {
     margin-left: 0;
   }
   .header__burger {
+    position: relative;
+    z-index: 50;
+    cursor: pointer;
     display: block;
     margin-left: 50px;
+  }
+  .header__btn {
+    display: block;
+    z-index: 5;
+    min-height: 28px;
+    padding: 9px 22px;
+    font-size: 7.9px;
+    font-weight: 700;
+    line-height: 126.6%;
+    position: absolute;
+    right: 15px;
+    bottom: -105px;
+  }
+  .header .menu__list {
+    flex-direction: column;
+  }
+  .header .menu__item:not(:last-child) {
+    margin-bottom: 30px;
   }
   .top__offer {
     padding: 152px 0px;
